@@ -23,6 +23,10 @@ $(function() {
 		loadAllRPage();
 	});
 
+	$(document).on('click', '.create_r', function() {
+		loadCreateRPage();
+	});
+
 
 
 	//
@@ -55,6 +59,21 @@ $(function() {
 			},
 			error: function(html) {
 				console.log("Error loading the html (all_r): ", html);
+			}
+		})
+	}
+
+	function loadCreateRPage() {
+		$.ajax({
+			url: "views/createrec.html",
+			dataType: "html",
+			cache: false,
+			success: function(html) {
+				$('.loadContent').html(html);
+				console.log("Loaded via .create_r button.");
+			},
+			error: function(html) {
+				console.log("Error loading the html (create_r): ", html);
 			}
 		})
 	}

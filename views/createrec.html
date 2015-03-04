@@ -1,10 +1,19 @@
 <div class="row">
-	<div class="col-md-12">
-		<h3>
-			Formulär för att lägga in recept i databasen.
-		</h3>
-		<p>
-			Kommer att finnas här, när den väl är färdig.
-		</p>
+	<div class="col-md-6">
+		<form class="createRecepie">
+			<div class="form-group">
+				<label for="title">Recept namn:</label>
+				<input class="form-control" type="text" id="title">
+			</div>
+			<div class="form-group">
+				<label for="mats">Ingredienser:</label>
+				<textarea class="form-control" type="text" rows="6" id="mats"></textarea>
+			</div>
+			<div class="form-group">
+				<label for="howto">Hur gör man:</label>
+				<textarea class="form-control" type="text" rows="6" id="howto"></textarea>
+			</div>
+			<button type="submit" class="btn btn-md btn-info">Lägg till</button>
+		</form>
 	</div>
 </div>

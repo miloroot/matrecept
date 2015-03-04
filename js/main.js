@@ -16,15 +16,15 @@ $(function() {
 	//
 
 	$(document).on('click', '.search_r', function() {
-		loadSearchPage();
+		loadPage("views/search.html");
 	});
 
 	$(document).on('click', '.all_r', function() {
-		loadAllRPage();
+		loadPage("views/allrec.html");
 	});
 
 	$(document).on('click', '.create_r', function() {
-		loadCreateRPage();
+		loadPage("views/createrec.html");
 	});
 
 
@@ -33,49 +33,19 @@ $(function() {
 	// FUNCTIONS
 	//
 
-	function loadSearchPage() {
+	function loadPage(url) {
 		$.ajax({
-			url: "views/search.html",
+			url: url,
 			dataType: "html",
 			cache: false,
 			success: function(html) {
 				$('.loadContent').html(html);
-				console.log("Loaded via .search_r button.");
+				console.log("Loaded via loadPage function.");
 			},
 			error: function(html) {
-				console.log("Error loading the html (search_r): ", html);
+				console.log("Error loading the html via loadPage function: ", html);
 			}
 		});
-	}
-
-	function loadAllRPage() {
-		$.ajax({
-			url: "views/allrec.html",
-			dataType: "html",
-			cache: false,
-			success: function(html) {
-				$('.loadContent').html(html);
-				console.log("Loaded via .all_r button.");
-			},
-			error: function(html) {
-				console.log("Error loading the html (all_r): ", html);
-			}
-		})
-	}
-
-	function loadCreateRPage() {
-		$.ajax({
-			url: "views/createrec.html",
-			dataType: "html",
-			cache: false,
-			success: function(html) {
-				$('.loadContent').html(html);
-				console.log("Loaded via .create_r button.");
-			},
-			error: function(html) {
-				console.log("Error loading the html (create_r): ", html);
-			}
-		})
 	}
 
 

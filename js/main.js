@@ -30,7 +30,7 @@ $(function() {
 
 
 	//
-	// FUNCTIONS - GLOBAL
+	// FUNCTIONS
 	//
 
 	function loadSearchPage() {
